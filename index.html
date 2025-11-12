@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Segnalazioni Italia</title>
+
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+
+<style>
+  html, body {
+    margin:0; 
+    padding:0; 
+    height:100%; 
+    font-family:sans-serif;
+  }
+
+  #map {
+    height: 80vh;
+    width: 100%;
+  }
+
+  #buttons {
+    padding: 10px;
+    text-align: center;
+    background-color: #f0f0f0;
+  }
+
+  #buttons button {
+    font-size:16px;
+    margin:5px;
+    padding:8px 12px;
+    cursor:pointer;
+    border:none;
+    border-radius:5px;
+    background-color:#007bff;
+    color:white;
+    transition: background-color 0.2s;
+  }
+
+  #buttons button:hover {
+    background-color:#0056b3;
+  }
+
+  h1 {
+    text-align:center;
+    margin:10px 0;
+  }
+</style>
+</head>
+<body>
+
+<h1>Segnalazioni Italia</h1>
+
+<div id="map"></div>
+
+<div id="buttons">
+  <button onclick="setTipo('incidente')">Incidenti</button>
+  <button onclick="setTipo('alert')">🚨</button>
+</div>
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<!-- Supabase JS v2 -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<!-- App JS -->
+<script src="app.js"></script>
+
+</body>
+</html>
